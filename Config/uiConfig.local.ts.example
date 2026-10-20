@@ -1,0 +1,4 @@
+// Copy this file as uiConfig.local.ts (or run yarn setup:pet-ui from the host)
+// and point it at the host project config.
+
+export { default } from "../../config/pet-ui.uiConfig"

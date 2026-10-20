@@ -1,0 +1,49 @@
+{
+  "name": "pet-ui",
+  "packageManager": "yarn@4.10.3",
+  "scripts": {
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint-staged": "lint-staged",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix --resolve-plugins-relative-to ./node_modules",
+      "prettier --write"
+    ],
+    "*.{json,md,css}": [
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": "20.12.0",
+    "yarn": "4.10.3"
+  },
+  "peerDependencies": {
+    "@floating-ui/react": "^0.27.19",
+    "@hookform/resolvers": "^5.2.2",
+    "@maskito/core": "^5.5.0",
+    "@maskito/kit": "^5.5.0",
+    "@maskito/react": "^5.5.0",
+    "@types/react": "^19.2.0",
+    "clsx": "^2.1.1",
+    "lint-staged": "15.2.10",
+    "prettier": "^3.6.2",
+    "react": "18",
+    "react-dom": "18",
+    "react-hook-form": "^7.71.2",
+    "tailwindcss": "^4",
+    "typescript": "^5.9.3",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.46.0",
+    "@typescript-eslint/parser": "^8.46.0",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "husky": "^9.1.7",
+    "lint-staged": "15.2.10",
+    "prettier": "^3.6.2"
+  }
+}

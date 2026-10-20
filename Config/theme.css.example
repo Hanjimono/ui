@@ -1,0 +1,4 @@
+/* Copy as theme.css (or run yarn setup:pet-ui from the host)
+ * and point it at the host project theme file. */
+
+@import "../../config/pet-ui.theme.css";
