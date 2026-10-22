@@ -2,82 +2,84 @@
  * Default design tokens for pet-ui (Tailwind v4 @theme).
  * Host projects import this file first, then override selected tokens in their own @theme block.
  * Naming: $primaryActionColor → --color-action-primary → bg-action-primary / text-action-primary
- *
- * Prefer rem for spacing/type, hex for solid colors.
  */
 
 @layer base, ui, combine-ui, complex-combine-ui;
 
 @theme {
   /* ----- Colors: actions ----- */
-  --color-action-primary: #006600;
-  --color-action-primary-hover: #005c00;
-  --color-action-primary-shadow: #005c00;
-  --color-action-primary-text: #ffffff;
+  --color-action-primary: #90caf9;
+  --color-action-primary-hover: #42a5f5;
+  --color-action-primary-shadow: #42a5f5;
+  --color-action-primary-text: #212121;
 
-  --color-action-secondary: #e0e0e0;
-  --color-action-secondary-hover: #d6d6d6;
-  --color-action-secondary-shadow: #d6d6d6;
-  --color-action-secondary-text: #212529;
+  --color-action-secondary: #2C2927;
+  --color-action-secondary-hover: #242221;
+  --color-action-secondary-shadow: #242221;
+  --color-action-secondary-text: #ffffff;
 
-  --color-action-danger: #dc3545;
-  --color-action-danger-hover: #c82333;
-  --color-action-danger-shadow: #c82333;
+  --color-action-danger: #f44336;
+  --color-action-danger-hover: #d32f2f;
+  --color-action-danger-shadow: #d32f2f;
   --color-action-danger-text: #ffffff;
 
-  --color-action-success: #28a745;
-  --color-action-success-hover: #218838;
-  --color-action-success-shadow: #218838;
-  --color-action-success-text: #ffffff;
+  --color-action-success: #66bb6a;
+  --color-action-success-hover: #388e3c;
+  --color-action-success-shadow: #388e3c;
+  --color-action-success-text: #212121;
 
   /* ----- Colors: loaders ----- */
-  --color-loader-primary: #007bff;
-  --color-loader-secondary: #6c757d;
+  --color-loader-primary: #90caf9;
+  --color-loader-secondary: #ce93d8;
+
+  /* ----- Animations: loaders ----- */
+  --animate-loader-rotation: loader-rotation 1s linear infinite;
+  --animate-loader-dash: loader-dash 1.5s ease-in-out infinite;
 
   /* ----- Colors: links ----- */
-  --color-link: #2d71fd;
-  --color-link-hover: #2d71fd;
-  --color-link-minor: #2d71fd;
-  --color-link-minor-hover: #2d71fd;
+  --color-link: #90caf9;
+  --color-link-hover: #42a5f5;
+  --color-link-minor: #616161;
+  --color-link-minor-hover: #212121;
 
   /* ----- Colors: semantic text ----- */
-  --color-text-default: #041522;
+  --color-text-default: #212121;
   --color-text-primary: var(--color-action-primary);
-  --color-text-secondary: var(--color-action-secondary);
+  --color-text-secondary: #666666;
   --color-text-danger: var(--color-action-danger);
   --color-text-success: var(--color-action-success);
 
   /* ----- Colors: forms ----- */
   --color-form-bg: #ffffff;
-  --color-form-border: #e0e0e0;
+  --color-form-border: #c4c4c4;
   --color-form-border-focused: var(--color-action-primary);
   --color-form-border-errored: var(--color-action-danger);
-  --color-form-bg-disabled: #f0f0f0;
+  --color-form-bg-disabled: #f5f5f5;
   --color-form-text: var(--color-text-default);
-  --color-form-placeholder: #6c757d;
+  --color-form-placeholder: #9e9e9e;
   --color-form-dropdown-bg: #ffffff;
-  --color-form-dropdown-bg-hover: #e0e0e0;
-  --color-form-dropdown-bg-selected: #d3d3d3;
-  --color-form-dropdown-bg-disabled: #f0f0f0;
+  --color-form-dropdown-bg-hover: #f5f5f5;
+  --color-form-dropdown-bg-selected: #e0e0e0;
+  --color-form-dropdown-bg-disabled: #f5f5f5;
   --color-form-choice-bg: #ffffff;
   --color-form-choice-bg-checked: var(--color-action-primary);
   --color-form-choice-border-checked: var(--color-form-choice-bg-checked);
-  --color-form-choice-mark: #ffffff;
+  --color-form-choice-mark: #212121;
 
   /* ----- Colors: tooltip ----- */
   --color-tooltip-bg: #ffffff;
   --color-tooltip-border: #e0e0e0;
   --color-tooltip-title-bg: transparent;
-  --color-tooltip-title-text: inherit;
+  --color-tooltip-title-text: #212121;
 
   /* ----- Colors: modal ----- */
-  --color-modal-overlay: rgb(4 21 34 / 50%);
+  --color-modal-overlay: rgb(0 0 0 / 50%);
   --color-modal-content-bg: #ffffff;
 
   /* ----- Font families ----- */
-  --font-text: "SF-Compact-Rounded", sans-serif;
-  --font-title: "Formular", sans-serif;
-  --font-form: "SF-Compact-Text", sans-serif;
+  --font-text: "Roboto", "Helvetica", "Arial", sans-serif;
+  --font-title: "Roboto", "Helvetica", "Arial", sans-serif;
+  --font-form: "Roboto", "Helvetica", "Arial", sans-serif;
   --font-action: var(--font-text);
   --font-tooltip-title: var(--font-title);
   --font-form-label: var(--font-form);
@@ -88,36 +90,36 @@
   --text-ui-xs: 0.75rem;
   --text-ui-s: 0.875rem;
   --text-ui-m: 1rem;
-  --text-ui-l: 1.5rem;
-  --text-ui-xl: 2rem;
-  --text-ui-2xl: 2.5rem;
-  --text-ui-3xl: 3rem;
+  --text-ui-l: 1.125rem;
+  --text-ui-xl: 1.25rem;
+  --text-ui-2xl: 1.5rem;
+  --text-ui-3xl: 1.875rem;
 
   /* ----- Font sizes: headings (desktop) ----- */
-  --text-heading-1: 3.25rem;
-  --text-heading-2: 3rem;
-  --text-heading-3: 2rem;
-  --text-heading-4: 1.5rem;
+  --text-heading-1: 2.25rem;
+  --text-heading-2: 1.875rem;
+  --text-heading-3: 1.5rem;
+  --text-heading-4: 1.25rem;
   --text-heading-5: 1.125rem;
-  --text-heading-6: 0.75rem;
+  --text-heading-6: 1rem;
 
   /* ----- Font sizes: body (mobile) ----- */
   --text-ui-mobile-2xs: 0.5rem;
   --text-ui-mobile-xs: 0.625rem;
-  --text-ui-mobile-s: 1rem;
-  --text-ui-mobile-m: 1.125rem;
-  --text-ui-mobile-l: 1.25rem;
-  --text-ui-mobile-xl: 1.5rem;
-  --text-ui-mobile-2xl: 2rem;
-  --text-ui-mobile-3xl: 2.5rem;
+  --text-ui-mobile-s: 0.75rem;
+  --text-ui-mobile-m: 0.875rem;
+  --text-ui-mobile-l: 1rem;
+  --text-ui-mobile-xl: 1.125rem;
+  --text-ui-mobile-2xl: 1.25rem;
+  --text-ui-mobile-3xl: 1.5rem;
 
   /* ----- Font sizes: headings (mobile) ----- */
-  --text-heading-mobile-1: 2rem;
+  --text-heading-mobile-1: 1.875rem;
   --text-heading-mobile-2: 1.5rem;
   --text-heading-mobile-3: 1.25rem;
   --text-heading-mobile-4: 1.125rem;
   --text-heading-mobile-5: 1rem;
-  --text-heading-mobile-6: 0.625rem;
+  --text-heading-mobile-6: 0.875rem;
 
   /* ----- Font sizes: actions ----- */
   --text-action-sm: 0.875rem;
@@ -153,11 +155,11 @@
 
   /* ----- Containers ----- */
   --container-base: 100%;
-  --container-md: 540px;
-  --container-lg: 720px;
-  --container-xl: 960px;
-  --container-xxl: 1140px;
-  --container-max: 1320px;
+  --container-md: 600px;
+  --container-lg: 900px;
+  --container-xl: 1200px;
+  --container-xxl: 1200px;
+  --container-max: 1536px;
 
   /* ----- Actions: gaps / padding parts ----- */
   --spacing-action-icon-gap: 0.375rem;
@@ -170,9 +172,9 @@
 
   /* ----- Actions: border / radius / shadow ----- */
   --border-width-action: 1px;
-  --radius-action-sm: 0.5em;
-  --radius-action-md: 0.5em;
-  --radius-action-lg: 0.5em;
+  --radius-action-sm: 0.25rem;
+  --radius-action-md: 0.25rem;
+  --radius-action-lg: 0.25rem;
   --spacing-action-shadow-blur: 0.75rem;
   --spacing-action-shadow-x: 0;
   --spacing-action-shadow-y: 4px;
@@ -190,7 +192,7 @@
   --spacing-form-dropdown-pad: 0.25rem;
   --spacing-form-dropdown-max-height: 16rem;
   --radius-form-dropdown: 0.5rem;
-  --shadow-form-dropdown: 0 12px 32px #0000001f;
+  --shadow-form-dropdown: 0 5px 5px -3px #00000033, 0 8px 10px 1px #00000024, 0 3px 14px 2px #0000001f;
   --spacing-form-dropdown-option-pad-block: 0.5rem;
   --spacing-form-dropdown-option-pad-inline: 0.75rem;
   --radius-form-dropdown-option: 0.375rem;
@@ -215,14 +217,14 @@
   --spacing-tooltip-title-pad-inline: 0.75rem;
   --spacing-tooltip-content-gap: 0.5rem;
   --spacing-tooltip-max-width: 20rem;
-  --shadow-tooltip: 0 0 0.75rem 0 #00000006;
+  --shadow-tooltip: 0 3px 1px -2px #00000033, 0 2px 2px 0 #00000024, 0 1px 5px 0 #0000001f;
 
   /* ----- Breakpoints ----- */
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
-  --breakpoint-xxl: 1440px;
+  --breakpoint-sm: 600px;
+  --breakpoint-md: 900px;
+  --breakpoint-lg: 1200px;
+  --breakpoint-xl: 1536px;
+  --breakpoint-xxl: 1536px;
 
   /* ----- Modal ----- */
   --radius-modal: 0.5rem;
@@ -232,5 +234,28 @@
   --spacing-modal-alert-max-width: 24rem;
   --spacing-modal-alert-min-width: 24rem;
   --spacing-modal-confirm-max-width: 32rem;
-  --shadow-modal: 0 0.5rem 2rem rgb(4 21 34 / 15%);
+  --shadow-modal: 0 11px 15px -7px #00000033, 0 24px 38px 3px #00000024, 0 9px 46px 8px #0000001f;
+}
+
+@keyframes loader-rotation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -125;
+  }
 }

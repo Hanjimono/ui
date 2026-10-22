@@ -1,5 +1,7 @@
 Config/theme.css
 Config/uiConfig.local.ts
+Modal/Registry/local.ts
+Modal/Registry/localTypes.ts
 
 .yarn/*
 !.yarn/patches

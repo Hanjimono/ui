@@ -1,0 +1,16 @@
+/**
+ * Example: re-export the host project's local modal registry.
+ *
+ * Copy to `local.ts` (gitignored) and point the import
+ * at your project's modal registry module.
+ *
+ * @example
+ * // Project constants
+ * import localRegistry from "../../../config/modalRegistry"
+ *
+ * export default localRegistry
+ */
+
+const localRegistry = {}
+
+export default localRegistry

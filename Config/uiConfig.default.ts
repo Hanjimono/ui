@@ -5,6 +5,7 @@ export const defaultUiConfig: UiConfig = {
   formInputVariant: "floating",
   formChoiceLabelPosition: "end",
   formRadioGroupDirection: "column",
+  buttonShadow: "no-shadow",
   tooltipIcon: { type: "md", name: "help", size: 24 },
   tooltipPlacement: "top",
   tooltipOffset: 10,

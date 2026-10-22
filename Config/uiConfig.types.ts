@@ -1,51 +1,25 @@
 /**
- * Self-contained UI config types for pet-ui.
- * After Form / Presentation / Floating are ported, these can be replaced with imports from those modules.
+ * UI config types for pet-ui.
+ * Form-related variants are imported from Form modules (no cycles: Form does not import uiConfig.types).
+ * FloatingPlacement and FloatingArrowRenderOptions come from Floating/Core.
+ * IconProps comes from Presentation/Icon.
  */
+
+import type {
+  FloatingPlacement,
+  FloatingArrowRenderOptions
+} from "../Floating/Core/types"
+import type { IconProps } from "../Presentation/Icon/types"
+import type { InputVariant } from "../Form/Input/types"
+import type { ChoiceLabelPosition } from "../Form/Checkbox/types"
+import type { RadioGroupDirection } from "../Form/RadioGroup/types"
+import type { ButtonShadow } from "../Action/Button/types"
 
 export type TextPropSize = "2xs" | "xs" | "s" | "m" | "l" | "xl" | "2xl" | "3xl"
 
-export type InputVariant = "floating" | "default"
-
-export type ChoiceLabelPosition = "start" | "end"
-
-export type RadioGroupDirection = "row" | "column"
-
 export type TitleTagVariant = "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
 
-export type FloatingPlacement =
-  | "top"
-  | "top-start"
-  | "top-end"
-  | "right"
-  | "right-start"
-  | "right-end"
-  | "bottom"
-  | "bottom-start"
-  | "bottom-end"
-  | "left"
-  | "left-start"
-  | "left-end"
-
-/** Minimal icon descriptor used by uiConfig defaults */
-export type IconProps = {
-  type: "md" | "fa" | "custom"
-  name?: string
-  size?: number
-  customIconLink?: string
-  alt?: string
-  className?: string
-  ariaLabel?: string
-}
-
-/** Arrow render options for tooltips / popups */
-export type FloatingArrowRenderOptions = {
-  fill?: string
-  stroke?: string
-  strokeWidth?: number
-  width?: number
-  height?: number
-}
+export type { FloatingPlacement, FloatingArrowRenderOptions, IconProps, InputVariant, ChoiceLabelPosition, RadioGroupDirection, ButtonShadow }
 
 /** UI configuration */
 export interface UiConfig {
@@ -57,6 +31,8 @@ export interface UiConfig {
   formChoiceLabelPosition: ChoiceLabelPosition
   /** RadioGroup options direction */
   formRadioGroupDirection: RadioGroupDirection
+  /** Button shadow when the shadow prop is omitted */
+  buttonShadow: ButtonShadow
   /** Tooltip trigger icon */
   tooltipIcon: IconProps
   /** Default tooltip placement relative to trigger */

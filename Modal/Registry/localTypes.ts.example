@@ -1,0 +1,14 @@
+/**
+ * Example: re-export the host project's local modal props map.
+ *
+ * Copy to `localTypes.ts` (gitignored) and point the import
+ * at your project's modal registry types.
+ *
+ * @example
+ * // Types from the host project
+ * import type { LocalModalRegistryMap as ProjectLocalModalRegistryMap } from "../../../config/modalTypes"
+ *
+ * export type LocalModalRegistryMap = ProjectLocalModalRegistryMap
+ */
+
+export type LocalModalRegistryMap = Record<string, never>
